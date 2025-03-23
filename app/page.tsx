@@ -62,11 +62,14 @@ export default function Home() {
             projects, powered by Prisma and styled with Shadcn UI components.
           </p>
           <div className="flex gap-4 mt-4">
-            <Link href="/signup">
+            <a
+              target="_blank"
+              href="https://github.com/Achour/nextjs-better-auth"
+            >
               <Button size="lg" className="gap-2">
                 Clone Repository <IconChevronRight size={18} />
               </Button>
-            </Link>
+            </a>
             <Link href="/login">
               <Button size="lg" variant="outline">
                 Try Demo
