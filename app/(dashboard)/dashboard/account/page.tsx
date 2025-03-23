@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { IconLoader } from "@tabler/icons-react";
+import { IconH1, IconLoader } from "@tabler/icons-react";
 import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
 
 import { authClient } from "@/lib/auth-client";
 
@@ -22,10 +23,10 @@ export default function Page() {
 
   async function getUser() {
     const { data: session } = await authClient.getSession();
-    // if (!session?.user) {
-    //   return router.push("/login");
-    // }
-    console.log(session);
+    // // if (!session?.user) {
+    // //   return router.push("/login");
+    // // }
+    // console.log(session);
     return session;
   }
 
@@ -36,7 +37,18 @@ export default function Page() {
     });
   }, []);
 
-  return (
+  return !email ? (
+    <div className="px-4 lg:px-6 lg:w-1/2 grid gap-4">
+      <Skeleton className="w-1/2 h-[20px] rounded-full" />
+      <Skeleton className="w-2/3 h-[20px] rounded-full" />
+      <Separator className="mb-4" />
+      <Skeleton className="w-full h-[20px] rounded-full" />
+      <Skeleton className="w-full h-[30px] rounded-full" />
+      <Skeleton className="w-full h-[20px] rounded-full" />
+      <Skeleton className="w-full h-[30px] rounded-full" />
+      <Skeleton className="w-full h-[30px] rounded-full" />
+    </div>
+  ) : (
     <>
       <div className="px-4 lg:px-6">
         <h1 className="text-lg font-medium">Account Setting</h1>
