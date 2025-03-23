@@ -2,6 +2,8 @@
 
 🚀 A starter kit for building modern web applications with **Next.js 15**, **Better Auth**, **Prisma**, and **shadcn/ui**.
 
+🔗 **[Live Demo](https://nextjs-better-auth-starterkit.vercel.app)**
+
 ## 📌 Features
 
 - ✅ **Next.js 15** with App Router
