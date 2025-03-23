@@ -104,12 +104,13 @@ export default async function page() {
             >
               Portfolio
             </a>
-            <Link
-              href="/contact"
+            <a
+              href="https://x.com/mr_digitus"
+              target="_blank"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Contact
-            </Link>
+            </a>
           </div>
           <div className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Mr.Digitus
