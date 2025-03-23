@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { IconLoader } from "@tabler/icons-react";
+import { Separator } from "@/components/ui/separator";
 
 import { authClient } from "@/lib/auth-client";
 
@@ -42,7 +43,7 @@ export default function Page() {
         <p className="text-sm text-muted-foreground mb-2">
           Edit your account information
         </p>
-
+        <Separator className="mb-4" />
         <form className="lg:w-1/2">
           <div className="flex flex-col gap-6">
             <div className="grid gap-3">
