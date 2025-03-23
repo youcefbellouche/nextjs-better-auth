@@ -63,4 +63,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/Achour)
+Made with ❤️ by [Achour Meguenni](https://github.com/Achour)
