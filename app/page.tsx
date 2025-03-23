@@ -1,4 +1,6 @@
-// app/page.jsx
+import { auth } from "@/lib/auth"; // path to your Better Auth server instance
+import { headers } from "next/headers";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -8,7 +10,11 @@ import {
   IconShieldCheckFilled,
 } from "@tabler/icons-react";
 
-export default function Home() {
+export default async function page() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Navigation */}
@@ -19,31 +25,26 @@ export default function Home() {
             <span className="font-bold text-xl">Better-Auth</span>
           </div>
           <nav className="flex items-center gap-6">
-            <a
-              href="/dashboard"
-              className="text-sm font-medium hover:underline"
-            >
-              Dashboard
-            </a>
-            {/* <Link
-              href="/pricing"
-              className="text-sm font-medium hover:underline"
-            >
-              Github
-            </Link>
-            <Link href="/blog" className="text-sm font-medium hover:underline">
-              Portfolio
-            </Link> */}
             <div className="flex items-center gap-2">
               <ModeToggle />
-              <Link href="/login">
-                <Button variant="outline" size="sm">
-                  Log in
-                </Button>
-              </Link>
-              <Link href="/signup">
-                <Button size="sm">Sign up</Button>
-              </Link>
+              {session?.user ? (
+                <a href="/dashboard">
+                  <Button variant="outline" size="sm">
+                    Dashboard
+                  </Button>
+                </a>
+              ) : (
+                <>
+                  <Link href="/login">
+                    <Button variant="outline" size="sm">
+                      Log in
+                    </Button>
+                  </Link>
+                  <Link href="/signup">
+                    <Button size="sm">Sign up</Button>
+                  </Link>
+                </>
+              )}
             </div>
           </nav>
         </div>
