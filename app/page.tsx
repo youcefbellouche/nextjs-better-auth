@@ -89,18 +89,20 @@ export default function Home() {
             <span className="font-bold">Auth Starter Kit</span>
           </div>
           <div className="flex gap-8">
-            <Link
-              href="/docs"
+            <a
+              href="https://github.com/achour"
+              target="_blank"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Github
-            </Link>
-            <Link
-              href="/#"
+            </a>
+            <a
+              href="https://www.mrdigitus.com/"
+              target="_blank"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Portfolio
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="text-sm text-muted-foreground hover:text-foreground"
