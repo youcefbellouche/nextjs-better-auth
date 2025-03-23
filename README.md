@@ -57,10 +57,6 @@
 - **shadcn/ui** - UI components
 - **TypeScript** - Type safety
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 Made with ❤️ by [Achour Meguenni](https://github.com/Achour)
