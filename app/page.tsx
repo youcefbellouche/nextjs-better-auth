@@ -19,12 +19,12 @@ export default function Home() {
             <span className="font-bold text-xl">Better-Auth</span>
           </div>
           <nav className="flex items-center gap-6">
-            <Link
+            <a
               href="/dashboard"
               className="text-sm font-medium hover:underline"
             >
               Dashboard
-            </Link>
+            </a>
             {/* <Link
               href="/pricing"
               className="text-sm font-medium hover:underline"
