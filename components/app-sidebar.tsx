@@ -4,6 +4,7 @@ import * as React from "react";
 import {
   IconCamera,
   IconChartBar,
+  IconCopy,
   IconDashboard,
   IconDatabase,
   IconFileAi,
@@ -11,11 +12,13 @@ import {
   IconFileWord,
   IconFolder,
   IconHelp,
+  IconHome,
   IconInnerShadowTop,
   IconListDetails,
   IconReport,
   IconSearch,
   IconSettings,
+  IconUserCircle,
   IconUsers,
 } from "@tabler/icons-react";
 
@@ -38,29 +41,39 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: IconListDetails,
+      title: "Account",
+      url: "/dashboard/account",
+      icon: IconUserCircle,
     },
     {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
+      title: "Setting",
+      url: "/dashboard/setting",
+      icon: IconSettings,
     },
-    {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
-    },
-    {
-      title: "Team",
-      url: "#",
-      icon: IconUsers,
-    },
+    // {
+    //   title: "Lifecycle",
+    //   url: "#",
+    //   icon: IconListDetails,
+    // },
+    // {
+    //   title: "Analytics",
+    //   url: "#",
+    //   icon: IconChartBar,
+    // },
+    // {
+    //   title: "Projects",
+    //   url: "#",
+    //   icon: IconFolder,
+    // },
+    // {
+    //   title: "Team",
+    //   url: "#",
+    //   icon: IconUsers,
+    // },
   ],
   navClouds: [
     {
@@ -112,37 +125,32 @@ const data = {
   ],
   navSecondary: [
     {
-      title: "Settings",
-      url: "#",
-      icon: IconSettings,
+      title: "Home",
+      url: "/",
+      icon: IconHome,
     },
     {
-      title: "Get Help",
+      title: "Clone Repository",
       url: "#",
-      icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
+      icon: IconCopy,
     },
   ],
   documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: IconDatabase,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: IconReport,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: IconFileWord,
-    },
+    // {
+    //   name: "Data Library",
+    //   url: "#",
+    //   icon: IconDatabase,
+    // },
+    // {
+    //   name: "Reports",
+    //   url: "#",
+    //   icon: IconReport,
+    // },
+    // {
+    //   name: "Word Assistant",
+    //   url: "#",
+    //   icon: IconFileWord,
+    // },
   ],
 };
 
@@ -165,7 +173,7 @@ export function AppSidebar({ user, ...props }: AppSidebarProps) {
             >
               <a href="#">
                 <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">AchourMeguenni</span>
+                <span className="text-base font-semibold">Dashboard</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -173,7 +181,7 @@ export function AppSidebar({ user, ...props }: AppSidebarProps) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
+        {/* <NavDocuments items={data.documents} /> */}
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
