@@ -98,14 +98,14 @@ export default async function page() {
               Github
             </a>
             <a
-              href="https://www.mrdigitus.com/"
+              href="https://www.achour.dev"
               target="_blank"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Portfolio
             </a>
             <a
-              href="https://x.com/mr_digitus"
+              href="https://x.com/achourdev"
               target="_blank"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
@@ -113,7 +113,7 @@ export default async function page() {
             </a>
           </div>
           <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Mr.Digitus
+            © {new Date().getFullYear()} Achour Meguenni
           </div>
         </div>
       </footer>
